@@ -21,7 +21,10 @@ const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/ngabo-saloon';
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://ngabo-salon-final-1-frontend.onrender.com",
+  credentials: true
+}));
 app.use(express.json());
 
 // Health check
