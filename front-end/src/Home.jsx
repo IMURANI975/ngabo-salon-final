@@ -1398,7 +1398,7 @@ const Home = () => {
                       >
                         <option value="">Select a service</option>
                         {services.map(service => (
-                          <option key={service._id || service.id} value={service._id || service.id}>
+                          <option key={service.name || service.name} value={service.name || service.name}>
                             {service.name || service.title} - ${service.price}
                           </option>
                         ))}
